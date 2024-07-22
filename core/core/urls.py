@@ -16,12 +16,13 @@ Including another URLconf
 from django.conf import settings
 from django.contrib import admin
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
-from django.urls import path
+from django.urls import path, include
 from debug_toolbar.toolbar import debug_toolbar_urls
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('account/', include('account.urls'))
 ]
 if settings.DEBUG:
     urlpatterns += [
