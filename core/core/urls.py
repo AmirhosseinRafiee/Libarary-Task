@@ -22,7 +22,8 @@ from debug_toolbar.toolbar import debug_toolbar_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('account/', include('account.urls'))
+    path('account/', include('account.urls')),
+    path('library/', include('library.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += [
