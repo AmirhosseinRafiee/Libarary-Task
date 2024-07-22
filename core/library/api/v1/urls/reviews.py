@@ -1,8 +1,8 @@
 from django.urls import path
-from ..views import AddReviewView, UpdateReviewView, DeleteReviewView
+from ..views import AddReviewAPIView, UpdateReviewAPIView, DeleteReviewAPIView
 
 urlpatterns = [
-    path('review/add/', AddReviewView.as_view(), name='add_review'),
-    path('review/update/', UpdateReviewView.as_view(), name='update_review'),
-    path('review/delete/<int:review_id>/', DeleteReviewView.as_view(), name='delete_review'),
+    path('review/add/', AddReviewAPIView.as_view(), name='add_review'),
+    path('review/update/', UpdateReviewAPIView.as_view(), name='update_review'),
+    path('review/delete/<int:review_id>/', DeleteReviewAPIView.as_view(), name='delete_review'),
 ]

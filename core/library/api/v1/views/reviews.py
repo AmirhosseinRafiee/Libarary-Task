@@ -7,7 +7,7 @@ from rest_framework.permissions import IsAuthenticated
 from ..serializers import ReviewAddSerializer, ReviewUpdateSerializer
 
 
-class AddReviewView(GenericAPIView):
+class AddReviewAPIView(GenericAPIView):
     """
     API view for adding a new review.
     """
@@ -36,7 +36,7 @@ class AddReviewView(GenericAPIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class UpdateReviewView(GenericAPIView):
+class UpdateReviewAPIView(GenericAPIView):
     """
     API view for updating an existing review.
     """
@@ -71,7 +71,7 @@ class UpdateReviewView(GenericAPIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class DeleteReviewView(APIView):
+class DeleteReviewAPIView(APIView):
     """
     API view for deleting a review.
     """
